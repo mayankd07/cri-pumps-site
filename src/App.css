@@ -1,38 +1,146 @@
-.App {
+
+body {
+  background-image: linear-gradient(
+    to top,
+    rgb(201, 202, 106),
+    rgb(255, 255, 255)
+  );
+  
+}
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo {
+  max-width: 20%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  grid-template-areas: "left right right ";
+}
+.right {
+  grid-area: right;
+  grid-auto-flow: column;
+}
+.points {
+  padding-left: 135px;
+  padding-right: 20px;
+}
+.left {
+  grid-area: left;
+  
+}
+.award-img-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.award{
+  max-width: 85%;
+}
+.right-heading {
+  margin-bottom: 10px;
+  padding-left: 62px;
+}
+.right-para {
+  padding-right: 65px;
+  padding-left: 78px;
+  display: inline-block;
+}
+
+.award-giving {
+  max-width: 80%;
+  float: right;
+  margin-right: 10%;
+}
+.pumps{
   text-align: center;
+  margin-top: 20px;
+}
+.para-pumps{
+  padding-left: 40px;
+}
+
+.img-pumps-img
+{
+  max-width: 80%;
+  height: auto;
+}
+hr{
+  max-width: 95%;
+  margin: auto;
+  height: 2px;
+  background-color: rgb(212, 17, 17);
+  border: none;
+}
+
+.services{
+  text-align: center;
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  background: rgb(206, 52, 52);
+  align-items: center;
+  color: white;
+  justify-content: center;
+  height: 80px;
+}
+.footer>p{
+  margin: 0% 5%;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width:706px)
+{
+  .container {
+    display: block;
+  }
+  .award{
+    max-width: 45%;
+  }
+  .points {
+    padding-left: 24px;
+    padding-right: 20px;
+  }
+  .right-para{
+    padding-right: 20px;
+  padding-left: 30px;
+  display: inline-block;
+  }
+  .right-heading {
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+  .logo {
+    max-width: 60%;
+  }
+  .para-pumps{
+    padding:0px 10px;
+  }
+  .pump-names{
+    padding:0px 10px;
+  }
+  .services>p{
+    padding :0px 10px;
+  }
+  .footer>p{
+    margin: 0px 10px;
+    font-size: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
